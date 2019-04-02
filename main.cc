@@ -31,6 +31,7 @@ class my_t : public repl_new
 public:
     my_t(long n) : n_(n)
     {
+
         a_ = (long **)mw_malloc1dlong(n_);
         
         // replicate the class across nodelets
@@ -54,6 +55,7 @@ public:
         // an additional migration 0 => 2.
         // Is it going to get the main thread instance of A or something?
         a_[i] = new long;
+        //a_[i] = (long *)malloc(sizeof(long)); //same
     }
 
     long * nodelet_addr(long i)
