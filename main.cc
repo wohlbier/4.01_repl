@@ -17,7 +17,7 @@ public:
     {
         return mw_mallocrepl(sz);
     }
-    
+
     // Overrides default delete to safely free replicated storage
     static void
     operator delete(void * ptr)
@@ -29,16 +29,9 @@ public:
 class my_t : public repl_new
 {
 public:
-    my_t(long n) : n_(n)
+    static my_t * create_my_t(long n)
     {
-
-        a_ = (long **)mw_malloc1dlong(n_);
-        
-        // replicate the class across nodelets
-        for (long i = 1; i < NODELETS(); ++i)
-        {
-            memcpy(mw_get_nth(this, i), mw_get_nth(this, 0), sizeof(*this));
-        }
+        return new my_t(n);
     }
 
     void fn(long i)
@@ -58,6 +51,12 @@ public:
         //a_[i] = (long *)malloc(sizeof(long)); //same
     }
 
+    my_t() = delete; // if needed, put as private
+    my_t(const my_t &) = delete;
+    my_t & operator=(const my_t &) = delete;
+    my_t(my_t &&) = delete;
+    my_t & operator=(my_t &&) = delete;
+
     long * nodelet_addr(long i)
     {
         // dereferencing causes migrations
@@ -65,6 +64,17 @@ public:
     }
     
 private:
+    my_t(long n) : n_(n)
+    {
+
+        a_ = (long **)mw_malloc1dlong(n_);
+
+        // replicate the class across nodelets
+        for (long i = 1; i < NODELETS(); ++i)
+        {
+            memcpy(mw_get_nth(this, i), mw_get_nth(this, 0), sizeof(*this));
+        }
+    }
 
     long n_;
     long ** a_;
@@ -76,8 +86,11 @@ int main(int argc, char* argv[])
     starttiming();
 
     long n = 8;
+
+    //my_t B(n);
+
     // instance created on nodelet 0
-    my_t * A = new my_t(n);
+    my_t * A = my_t::create_my_t(n);
 
     long i = 2; // nodelet 2
     cilk_migrate_hint(A->nodelet_addr(i)); // no migration, do not deref a_
