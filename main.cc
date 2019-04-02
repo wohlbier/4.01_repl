@@ -77,11 +77,11 @@ int main(int argc, char* argv[])
 
     long n = 8;
     // instance created on nodelet 0
-    my_t A(n);
+    my_t * A = new my_t(n);
 
     long i = 2; // nodelet 2
-    cilk_migrate_hint(A.nodelet_addr(i)); // no migration, do not deref a_
-    cilk_spawn A.fn(i);
+    cilk_migrate_hint(A->nodelet_addr(i)); // no migration, do not deref a_
+    cilk_spawn A->fn(i);
 
     cilk_sync;
     
