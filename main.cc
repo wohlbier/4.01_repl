@@ -36,19 +36,7 @@ public:
 
     void fn(long i)
     {
-        // If nothing is in this function, then
-        // - migrate 0 => 2
-        // - migrate 2 => 0 from main thread
-        // - migrate 2 => 0 from spawned thread
-
-        // I would have thought that adding the line below would not cause
-        // additional migrations since the class is replicated, i.e.,
-        // a_[i] would be a local operation.
-        // However, it adds an additional migration 2 => 0 and
-        // an additional migration 0 => 2.
-        // Is it going to get the main thread instance of A or something?
         a_[i] = new long;
-        //a_[i] = (long *)malloc(sizeof(long)); //same
     }
 
     my_t() = delete; // if needed, put as private
@@ -93,7 +81,11 @@ int main(int argc, char* argv[])
     my_t * A = my_t::create_my_t(n);
 
     long i = 2; // nodelet 2
+    // - migrate 0 => 2
+    // - migrate 2 => 0 from main thread returning to 0
     cilk_migrate_hint(A->nodelet_addr(i)); // no migration, do not deref a_
+    // - migrate 2 => 0 from spawned thread returning to 0
+
     cilk_spawn A->fn(i);
 
     cilk_sync;
