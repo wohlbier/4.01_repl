@@ -1,0 +1,21 @@
+,function_name,migration_count,total_instruction_count,total_regs_migrated,percent_total_instructions,percent_total_migrations
+0,malloc,0,1188,0,30.985915493,0.0
+1,Matrix_t::Matrix_t,6,531,128,13.8497652582,100.0
+2,mw_get_nth,0,378,0,9.85915492958,0.0
+3,memcpy,0,350,0,9.12884715702,0.0
+4,free,0,222,0,5.79029733959,0.0
+5,mw_mallocstripe,0,210,0,5.47730829421,0.0
+6,operator new,0,178,0,4.64267083985,0.0
+7,mw_malloc1dlong,0,124,0,3.23422013563,0.0
+8,cilkhelper0,0,102,0,2.66040688576,0.0
+9,cilkhelper1,0,102,0,2.66040688576,0.0
+10,__stdio_exit_needed,0,87,0,2.26917057903,0.0
+11,__ofl_lock,0,85,0,2.21700573813,0.0
+12,__libc_exit_fini,0,76,0,1.98226395409,0.0
+13,mw_mallocrepl,0,74,0,1.9300991132,0.0
+14,exit,0,44,0,1.14762649974,0.0
+15,main,0,36,0,0.93896713615,0.0
+16,__cilk_sync,0,28,0,0.730307772561,0.0
+17,__cilk_parent_prologue,0,8,0,0.208659363589,0.0
+18,_Exit,0,7,0,0.18257694314,0.0
+19,dummy,0,2,0,0.0521648408972,0.0
