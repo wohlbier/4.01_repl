@@ -1,6 +1,16 @@
-#include <string>
 #include <cilk.h>
 #include <memoryweb.h>
+#include <string>
+
+
+
+
+typedef long Index_t;
+
+
+
+
+
 
 /*
  * Overrides default new to always allocate replicated storage for instances
@@ -26,58 +36,62 @@ public:
     }
 };
 
-class my_t : public repl_new
+class Matrix_t : public repl_new
 {
 public:
-    static my_t * create_my_t(long n)
+    static Matrix_t * create(Index_t nrows)
     {
-        return new my_t(n);
+        return new Matrix_t(nrows);
     }
 
-    void fn(long i)
+    Matrix_t() = delete;
+    Matrix_t(const Matrix_t &) = delete;
+    Matrix_t & operator=(const Matrix_t &) = delete;
+    Matrix_t(Matrix_t &&) = delete;
+    Matrix_t & operator=(Matrix_t &&) = delete;
+
+    void allocateRow(Index_t i)  
     {
-        // If nothing is in this function, then
-        // - migrate 0 => 2
-        // - migrate 2 => 0 from main thread
-        // - migrate 2 => 0 from spawned thread
-
-        // I would have thought that adding the line below would not cause
-        // additional migrations since the class is replicated, i.e.,
-        // a_[i] would be a local operation.
-        // However, it adds an additional migration 2 => 0 and
-        // an additional migration 0 => 2.
-        // Is it going to get the main thread instance of A or something?
-        a_[i] = new long;
-        //a_[i] = (long *)malloc(sizeof(long)); //same
+        rows_[i] = new long;
     }
-
-    my_t() = delete; // if needed, put as private
-    my_t(const my_t &) = delete;
-    my_t & operator=(const my_t &) = delete;
-    my_t(my_t &&) = delete;
-    my_t & operator=(my_t &&) = delete;
 
     long * nodelet_addr(long i)
     {
         // dereferencing causes migrations
-        return (long *)(a_ + i);
+        return (long *)(rows_ + i);
     }
-    
-private:
-    my_t(long n) : n_(n)
-    {
 
-        a_ = (long **)mw_malloc1dlong(n_);
+  
+private:
+    Matrix_t(Index_t nrows) : nrows_(nrows)
+    {
+        rows_ = (long **)mw_malloc1dlong(nrows_);
 
         // replicate the class across nodelets
-        for (long i = 1; i < NODELETS(); ++i)
+        for (Index_t i = 1; i < NODELETS(); ++i)
         {
             memcpy(mw_get_nth(this, i), mw_get_nth(this, 0), sizeof(*this));
         }
+       
+
+
+
+
+
+
+
+
+
     }
 
-    long n_;
-    long ** a_;
+
+
+
+
+
+
+    Index_t nrows_;
+    Index_t ** rows_;
 };
 
 
@@ -85,16 +99,17 @@ int main(int argc, char* argv[])
 {
     starttiming();
 
-    long n = 8;
+    Index_t nrows = 8;
+    
+    Matrix_t * A = Matrix_t::create(nrows);
 
-    //my_t B(n);
+    // local mallocs on nodelet 2 and 5
 
-    // instance created on nodelet 0
-    my_t * A = my_t::create_my_t(n);
+    cilk_migrate_hint(A->nodelet_addr(2));
+    cilk_spawn A->allocateRow(2);
 
-    long i = 2; // nodelet 2
-    cilk_migrate_hint(A->nodelet_addr(i)); // no migration, do not deref a_
-    cilk_spawn A->fn(i);
+    cilk_migrate_hint(A->nodelet_addr(5));
+    cilk_spawn A->allocateRow(5);
 
     cilk_sync;
     

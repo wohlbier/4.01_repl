@@ -1,0 +1,1575 @@
+**********************************************
+START INSTRUCTION COUNT FOR AID=1
+**********************************************
+@main
+Migration Count: 5
+Remote Count: 0
+migrations_with_reg_count[6]=1
+migrations_with_reg_count[20]=2
+migrations_with_reg_count[22]=2
+ST:Resize at TPC=0x8000225b averaged removing 17 registers
+ST:Resize at TPC=0x80002350 averaged removing 17 registers
+RTS: 1
+DTA: 2
+SWAPD: 2
+ADD: 1
+ADDM: 2
+DTD2: 1
+ADDE: 1
+LSR0: 14
+LSR3: 2
+AAIM: 5
+LIT: 6
+ETE: 7
+RESIZE: 2
+SILL: 25
+LIT16: 10
+JL: 2
+BCTDZ: 1
+BCTAZ: 2
+BCTITA: 1
+BCFZ: 1
+BCTZ: 2
+SPC: 2
+LD: 2
+STD: 1
+WRD: 1
+STDIA: 6
+JALE: 9
+JMPE: 1
+DPETA: 7
+CAS: 1
+STE: 2
+LDE: 9
+LD8A: 2
+RELEASE: 1
+DTE: 7
+ATE: 8
+ETA: 14
+
+@cilkhelper0
+Migration Count: 0
+Remote Count: 0
+DTA: 6
+SWAPD: 3
+DTD2: 2
+LSR0: 3
+LSR3: 1
+AAIM: 8
+LIT: 2
+JMP: 1
+ETE: 3
+LM: 1
+SM: 1
+SILL: 16
+LIT16: 4
+BCFDZ: 1
+BCTGT: 1
+BCTITA: 1
+BCFZ: 2
+LD: 3
+STD: 2
+WRD: 3
+JALE: 2
+JMPE: 1
+CAS: 2
+STE: 1
+LDE: 3
+DTE: 4
+ATE: 2
+ETD: 4
+ETA: 8
+
+@__cilk_excepting_sync
+Migration Count: 0
+Remote Count: 0
+
+@Matrix_t::create
+Migration Count: 0
+Remote Count: 0
+DTA: 5
+SWAPD: 4
+DTD2: 2
+XORE: 7
+CMPE: 1
+LSR0: 30
+LSR1: 2
+LSR3: 1
+LSRf: 1
+AAIM: 11
+AAIMB: 7
+LIT: 8
+JMP: 7
+ETE: 46
+TDT: 1
+SILL: 55
+LIT16: 3
+BCTDZ: 7
+BCTGT: 1
+BCFZ: 2
+LD: 2
+STD: 2
+WRD: 7
+JALE: 23
+JMPE: 1
+CAS: 2
+STE: 1
+LDE: 7
+DTE: 19
+ATE: 8
+ETD: 15
+ETA: 21
+
+@__cilk_parent_prologue
+Migration Count: 0
+Remote Count: 0
+
+@__cilk_parent_epilogue
+Migration Count: 0
+Remote Count: 0
+
+@__cilk_helper_prologue
+Migration Count: 0
+Remote Count: 0
+
+@__cilk_helper_epilogue
+Migration Count: 0
+Remote Count: 0
+
+@__cilk_sync
+Migration Count: 1
+Remote Count: 0
+migrations_with_reg_count[22]=1
+FENCE: 1
+STS: 1
+ADDM: 2
+ATA2: 1
+LSR1: 1
+LSR5: 1
+AAIM: 5
+JMP: 1
+TDF: 1
+BCFDZ: 2
+BCTDZ: 2
+BCTITA: 1
+STD: 2
+JMPE: 2
+RELEASE: 1
+ETD: 2
+ETA: 2
+
+@mw_mallocrepl
+Migration Count: 0
+Remote Count: 0
+DTA: 5
+SWAPD: 4
+DTD2: 2
+ANDE: 1
+XORE: 1
+SLLV: 1
+LSR0: 2
+LSR3: 2
+LSRe: 1
+AAIM: 2
+JMP: 1
+ETE: 2
+MUMA1: 1
+MUMO1: 1
+SILL: 11
+LIT16: 3
+BCTGT: 1
+BCFAZ: 2
+BCFZ: 2
+LD: 2
+STD: 2
+WRD: 1
+PRIORITYE: 1
+JALE: 1
+JMPE: 1
+CAS: 2
+STE: 1
+LDE: 3
+DTE: 6
+ATE: 1
+ETD: 2
+ETA: 6
+
+@mw_free
+Migration Count: 0
+Remote Count: 0
+
+@operator new
+Migration Count: 0
+Remote Count: 0
+DTA: 12
+SWAPD: 6
+DTD2: 4
+LSR0: 6
+LSR3: 2
+AAIM: 12
+LIT: 2
+JMP: 4
+ETE: 8
+LM: 2
+SM: 2
+SILL: 32
+LIT16: 8
+BCFDZ: 2
+BCTGT: 2
+BCFAZ: 2
+BCTAZ: 2
+BCFZ: 4
+LD: 6
+STD: 4
+WRD: 4
+JALE: 4
+JMPE: 2
+CAS: 4
+STE: 2
+LDE: 6
+DTE: 6
+ATE: 4
+ETD: 6
+ETA: 18
+
+@operator new[]
+Migration Count: 0
+Remote Count: 0
+
+@operator new[]
+Migration Count: 0
+Remote Count: 0
+
+@operator delete
+Migration Count: 0
+Remote Count: 0
+
+@operator delete[]
+Migration Count: 0
+Remote Count: 0
+
+@operator new
+Migration Count: 0
+Remote Count: 0
+
+@operator new
+Migration Count: 0
+Remote Count: 0
+
+@starttiming
+Migration Count: 0
+Remote Count: 0
+JMPE: 1
+
+@operator new[]
+Migration Count: 0
+Remote Count: 0
+
+@operator new[]
+Migration Count: 0
+Remote Count: 0
+
+@operator delete
+Migration Count: 0
+Remote Count: 0
+
+@operator delete[]
+Migration Count: 0
+Remote Count: 0
+
+@operator delete[]
+Migration Count: 0
+Remote Count: 0
+
+@std::get_unexpected
+Migration Count: 0
+Remote Count: 0
+
+@std::__terminate
+Migration Count: 0
+Remote Count: 0
+
+@std::set_new_handler
+Migration Count: 0
+Remote Count: 0
+
+@std::get_new_handler
+Migration Count: 0
+Remote Count: 0
+
+@mw_get_nth
+Migration Count: 0
+Remote Count: 0
+NEG: 14
+ADDE: 14
+MULTE: 14
+ORE: 28
+CMPE: 28
+SLLV: 14
+LSR0: 14
+LSR9: 28
+LSRe: 14
+LSRf: 14
+SRLC: 28
+MUMA1: 28
+TDF: 14
+ORL3: 14
+PRIORITYE: 14
+JMPE: 14
+DPETA: 14
+DTE: 56
+ATE: 14
+
+@abort_message
+Migration Count: 0
+Remote Count: 0
+
+@default_terminate_handler
+Migration Count: 0
+Remote Count: 0
+
+@std::set_terminate
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::__vector_base<...>::~__vector_base
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::__vector_base<...>::~__vector_base
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::__split_buffer<...>::~__split_buffer
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_encoding<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_type<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_name<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_call_offset
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::basic_string<...>::insert
+Migration Count: 0
+Remote Count: 0
+
+@std::__throw_bad_alloc
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::basic_string<...>::append
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::vector<...>::vector
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::operator+<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_template_param<...>
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_typeid::bad_typeid
+Migration Count: 0
+Remote Count: 0
+
+@fprintf
+Migration Count: 0
+Remote Count: 0
+
+@strerror_l
+Migration Count: 0
+Remote Count: 0
+
+@wctomb
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_typeid::~bad_typeid
+Migration Count: 0
+Remote Count: 0
+
+_start
+Migration Count: 0
+Remote Count: 0
+LSR0: 1
+SILL: 2
+JALE: 1
+
+@std::type_info::~type_info
+Migration Count: 0
+Remote Count: 0
+
+@__isdigit_l
+Migration Count: 0
+Remote Count: 0
+
+@isxdigit
+Migration Count: 0
+Remote Count: 0
+
+@__isxdigit_l
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pointer_to_member_type_info::~__pointer_to_member_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__fwrite
+Migration Count: 0
+Remote Count: 0
+
+@__cxa_pure_virtual
+Migration Count: 0
+Remote Count: 0
+
+@__fputs
+Migration Count: 0
+Remote Count: 0
+
+@operator delete[]
+Migration Count: 0
+Remote Count: 0
+
+@exit
+Migration Count: 0
+Remote Count: 0
+DTA: 3
+SWAPD: 2
+DTD2: 1
+LSR0: 4
+LSR3: 1
+JMP: 1
+ETE: 2
+SILL: 14
+LIT16: 2
+BCTGT: 1
+BCFZ: 1
+LD: 1
+STD: 1
+JALE: 4
+CAS: 1
+STE: 1
+LDE: 1
+DTE: 2
+ETD: 1
+
+@__cxxabiv1::__si_class_type_info::search_below_dst
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_cast::~bad_cast
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__array_type_info::can_catch
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__base_class_type_info::search_above_dst
+Migration Count: 0
+Remote Count: 0
+
+@std::get_terminate
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__si_class_type_info::~__si_class_type_info
+Migration Count: 0
+Remote Count: 0
+
+@malloc
+Migration Count: 0
+Remote Count: 0
+DTA: 57
+AND: 9
+ADDE: 16
+SUBE: 9
+ORE: 9
+XORE: 13
+CMPE: 20
+LSR0: 18
+LSR8: 9
+AAIM: 56
+LIT: 45
+JMP: 18
+ETE: 9
+MUMA0: 18
+MUMO1: 9
+TDF: 11
+TDT: 9
+ADDL: 9
+SILL: 171
+LIT16: 57
+BCFDZ: 32
+BCTDZ: 2
+BCFAZ: 18
+BCTAZ: 9
+LD: 32
+WRD: 81
+JMPE: 9
+DPETA: 27
+CAS: 9
+LDE: 29
+DTE: 47
+ATE: 38
+ETD: 105
+ETA: 141
+
+@isupper_l
+Migration Count: 0
+Remote Count: 0
+
+@__cxa_demangle
+Migration Count: 0
+Remote Count: 0
+
+@isdigit_l
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__vmi_class_type_info::~__vmi_class_type_info
+Migration Count: 0
+Remote Count: 0
+
+@memmove_p0i8_p0i8_i64
+Migration Count: 0
+Remote Count: 0
+
+@__restore_sigs
+Migration Count: 0
+Remote Count: 0
+
+@__lctrans
+Migration Count: 0
+Remote Count: 0
+
+@fputs_unlocked
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_typeid::~bad_typeid
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_substitution<...>
+Migration Count: 0
+Remote Count: 0
+
+@fputs
+Migration Count: 0
+Remote Count: 0
+
+@__cxa_get_globals_fast
+Migration Count: 0
+Remote Count: 0
+
+@libc_start_init
+Migration Count: 0
+Remote Count: 0
+
+@operator delete
+Migration Count: 0
+Remote Count: 0
+
+@__cxa_deleted_virtual
+Migration Count: 0
+Remote Count: 0
+
+@wcrtomb
+Migration Count: 0
+Remote Count: 0
+
+@std::type_info::~type_info
+Migration Count: 0
+Remote Count: 0
+
+@llvm_memset_p0i8_i64
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_typeid::what
+Migration Count: 0
+Remote Count: 0
+
+@strcmp
+Migration Count: 0
+Remote Count: 0
+
+@__towrite_needs_stdio_exit
+Migration Count: 0
+Remote Count: 0
+
+@vsnprintf
+Migration Count: 0
+Remote Count: 0
+
+@_init
+Migration Count: 0
+Remote Count: 0
+
+@__unlockfile
+Migration Count: 0
+Remote Count: 0
+
+@__aio_close
+Migration Count: 0
+Remote Count: 0
+
+@_Exit
+Migration Count: 0
+Remote Count: 0
+LIT: 1
+SLLC: 1
+SRAC: 1
+RELEASE: 1
+DTE: 2
+ETD: 1
+
+@__cxxabiv1::(anonymous namespace)::parse_unqualified_name<...>
+Migration Count: 0
+Remote Count: 0
+
+@__lock
+Migration Count: 0
+Remote Count: 0
+JMPE: 1
+
+@__stdio_close
+Migration Count: 0
+Remote Count: 0
+
+@__stdio_exit_needed
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__class_type_info::process_found_base_class
+Migration Count: 0
+Remote Count: 0
+
+@__towrite
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_typeid::~bad_typeid
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_expr_primary<...>
+Migration Count: 0
+Remote Count: 0
+
+@__ofl_unlock
+Migration Count: 0
+Remote Count: 0
+
+@__libc_exit_fini
+Migration Count: 0
+Remote Count: 0
+DTA: 5
+SWAPD: 4
+DTD2: 2
+CMPE: 1
+LSR0: 1
+LSR3: 1
+AAIM: 4
+JMP: 2
+ETE: 2
+TDT: 1
+SILL: 17
+LIT16: 5
+BCTGT: 1
+BCFZ: 2
+LD: 2
+STD: 2
+WRD: 2
+JALE: 1
+JMPE: 1
+CAS: 2
+STE: 1
+LDE: 4
+DTE: 3
+ATE: 1
+ETD: 3
+ETA: 6
+
+@__ofl_lock
+Migration Count: 0
+Remote Count: 0
+DTA: 6
+SWAPD: 3
+DTD2: 2
+LSR0: 3
+LSR3: 1
+AAIM: 4
+LIT: 1
+JMP: 1
+ETE: 2
+LM: 1
+SM: 1
+SILL: 22
+LIT16: 6
+BCFDZ: 1
+BCTGT: 1
+BCFZ: 2
+LD: 3
+STD: 2
+WRD: 1
+JALE: 2
+JMPE: 1
+CAS: 2
+STE: 1
+LDE: 2
+DTE: 5
+ATE: 2
+ETD: 2
+ETA: 5
+
+@llvm_memcpy_p0i8_p0i8_i64
+Migration Count: 0
+Remote Count: 0
+
+@operator delete
+Migration Count: 0
+Remote Count: 0
+
+@__stdio_write
+Migration Count: 0
+Remote Count: 0
+
+@std::exception::~exception
+Migration Count: 0
+Remote Count: 0
+
+@fwrite_unlocked
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_cast::what
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_cast::bad_cast
+Migration Count: 0
+Remote Count: 0
+
+@__lockfile
+Migration Count: 0
+Remote Count: 0
+
+@memset
+Migration Count: 0
+Remote Count: 0
+
+@frexpl
+Migration Count: 0
+Remote Count: 0
+
+@sn_write
+Migration Count: 0
+Remote Count: 0
+
+@std::set_unexpected
+Migration Count: 0
+Remote Count: 0
+
+@__stdio_exit
+Migration Count: 0
+Remote Count: 0
+DTA: 7
+SWAPD: 4
+DTD2: 2
+LSR0: 1
+LSR3: 1
+AAIM: 4
+JMP: 1
+ETE: 2
+SILL: 17
+LIT16: 5
+JL: 3
+BCTGT: 1
+BCFAZ: 3
+BCFZ: 2
+LD: 2
+STD: 2
+WRD: 2
+JALE: 1
+JMPE: 1
+CAS: 2
+STE: 1
+LDE: 7
+DTE: 2
+ATE: 1
+ETD: 3
+ETA: 10
+
+@__cxxabiv1::__pointer_to_member_type_info::can_catch
+Migration Count: 0
+Remote Count: 0
+
+@__block_app_sigs
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__enum_type_info::~__enum_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__stdio_seek
+Migration Count: 0
+Remote Count: 0
+
+@dummy
+Migration Count: 0
+Remote Count: 0
+
+@memmove
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__si_class_type_info::search_above_dst
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_builtin_type<...>
+Migration Count: 0
+Remote Count: 0
+
+@printf_core
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::demangle<...>
+Migration Count: 0
+Remote Count: 0
+
+@memcpy_p0i8_p0i8_i64
+Migration Count: 0
+Remote Count: 0
+
+@pad
+Migration Count: 0
+Remote Count: 0
+
+@__lctrans_impl
+Migration Count: 0
+Remote Count: 0
+
+@std::terminate
+Migration Count: 0
+Remote Count: 0
+
+@llvm_memmove_p0i8_p0i8_i64
+Migration Count: 0
+Remote Count: 0
+
+@__lctrans_cur
+Migration Count: 0
+Remote Count: 0
+
+@__syscall_ret
+Migration Count: 0
+Remote Count: 0
+
+@strerror
+Migration Count: 0
+Remote Count: 0
+
+@frexp
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_template_arg<...>
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_typeid::bad_typeid
+Migration Count: 0
+Remote Count: 0
+
+@dummy1
+Migration Count: 0
+Remote Count: 0
+
+@__block_all_sigs
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::basic_string<...>::assign
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_simple_id<...>
+Migration Count: 0
+Remote Count: 0
+
+@strnlen
+Migration Count: 0
+Remote Count: 0
+
+@strlen
+Migration Count: 0
+Remote Count: 0
+
+@std::type_info::~type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__base_class_type_info::has_unambiguous_public_base
+Migration Count: 0
+Remote Count: 0
+
+@_fini
+Migration Count: 0
+Remote Count: 0
+
+@memcpy
+Migration Count: 0
+Remote Count: 14
+ANDE: 7
+CMPE: 7
+LSR1: 7
+AAIM: 28
+LIT: 7
+JMP: 28
+ETE: 21
+MUMA1: 14
+TDF: 7
+TDT: 42
+JL: 7
+BCTDZ: 21
+LD: 14
+WRD: 14
+JMPE: 7
+DTE: 7
+ATE: 14
+ETD: 56
+ETA: 42
+
+@__cxxabiv1::__shim_type_info::~__shim_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__fwritex
+Migration Count: 0
+Remote Count: 0
+
+@std::unexpected
+Migration Count: 0
+Remote Count: 0
+
+@memcmp
+Migration Count: 0
+Remote Count: 0
+
+@__init_ssp
+Migration Count: 0
+Remote Count: 0
+
+@vfprintf
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_integer_literal<...>
+Migration Count: 0
+Remote Count: 0
+
+@free
+Migration Count: 0
+Remote Count: 0
+DTA: 10
+ORM: 1
+ADDE: 1
+ORE: 1
+LSR0: 4
+LSR1: 1
+LSR8: 2
+AAIM: 13
+LIT: 2
+JMP: 2
+MUMA0: 3
+MUMO1: 1
+TDF: 4
+TDT: 2
+ADDL: 2
+SILL: 30
+LIT16: 10
+JL: 1
+BCFDZ: 2
+BCFAZ: 6
+BCTAZ: 2
+BCTITA: 1
+LD: 4
+WRD: 16
+JMPE: 2
+DPETA: 4
+CAS: 2
+LDE: 8
+LD8A: 2
+DTE: 6
+ATE: 11
+ETD: 22
+ETA: 38
+
+@__cxxabiv1::__function_type_info::~__function_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pointer_type_info::can_catch_nested
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_cast::~bad_cast
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_cast::bad_cast
+Migration Count: 0
+Remote Count: 0
+
+@default_unexpected_handler
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__class_type_info::search_above_dst
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__vmi_class_type_info::search_above_dst
+Migration Count: 0
+Remote Count: 0
+
+@__libc_start_main
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__class_type_info::search_below_dst
+Migration Count: 0
+Remote Count: 0
+
+@libc_exit_fini
+Migration Count: 0
+Remote Count: 0
+
+@snprintf
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__base_class_type_info::search_below_dst
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pointer_type_info::can_catch
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__vmi_class_type_info::search_below_dst
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__class_type_info::process_static_type_below_dst
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__class_type_info::process_static_type_above_dst
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__vmi_class_type_info::~__vmi_class_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pbase_type_info::~__pbase_type_info
+Migration Count: 0
+Remote Count: 0
+
+@operator new
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pbase_type_info::can_catch
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__si_class_type_info::has_unambiguous_public_base
+Migration Count: 0
+Remote Count: 0
+
+@operator delete[]
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__enum_type_info::can_catch
+Migration Count: 0
+Remote Count: 0
+
+@operator delete
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__class_type_info::has_unambiguous_public_base
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__class_type_info::can_catch
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__function_type_info::can_catch
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__function_type_info::~__function_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__class_type_info::~__class_type_info
+Migration Count: 0
+Remote Count: 0
+
+@calloc
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__fundamental_type_info::can_catch
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__array_type_info::~__array_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pointer_type_info::~__pointer_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__si_class_type_info::~__si_class_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__class_type_info::~__class_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxa_get_globals
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__enum_type_info::~__enum_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__array_type_info::~__array_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__array_type_info::~__array_type_info
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::operator+<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_unresolved_type<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__fundamental_type_info::~__fundamental_type_info
+Migration Count: 0
+Remote Count: 0
+
+@mw_get_localto
+Migration Count: 0
+Remote Count: 0
+
+@__errno_location
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__shim_type_info::noop2
+Migration Count: 0
+Remote Count: 0
+
+@memset_p0i8_i64
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__shim_type_info::~__shim_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_binary_expression<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__shim_type_info::~__shim_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_base_unresolved_name<...>
+Migration Count: 0
+Remote Count: 0
+
+@abort
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_exception::~bad_exception
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_decltype<...>
+Migration Count: 0
+Remote Count: 0
+
+@__strerror_l
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__class_type_info::~__class_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_template_args<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__vmi_class_type_info::~__vmi_class_type_info
+Migration Count: 0
+Remote Count: 0
+
+@operator delete
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_cast::~bad_cast
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::basic_string<...>::insert<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pointer_to_member_type_info::~__pointer_to_member_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pointer_type_info::~__pointer_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__enum_type_info::~__enum_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__vmi_class_type_info::has_unambiguous_public_base
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__fundamental_type_info::~__fundamental_type_info
+Migration Count: 0
+Remote Count: 0
+
+@std::__unexpected
+Migration Count: 0
+Remote Count: 0
+
+@__unlock
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pbase_type_info::~__pbase_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pointer_type_info::~__pointer_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__function_type_info::~__function_type_info
+Migration Count: 0
+Remote Count: 0
+
+@memchr
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__si_class_type_info::~__si_class_type_info
+Migration Count: 0
+Remote Count: 0
+
+@mw_mallocstripe
+Migration Count: 0
+Remote Count: 0
+DTA: 4
+AND: 2
+ADDE: 2
+SUBE: 2
+ORE: 2
+XORE: 4
+CMPE: 5
+LSR0: 2
+AAIM: 15
+LIT: 10
+JMP: 5
+ETE: 2
+MUMA0: 5
+MUMO1: 2
+TDF: 5
+SILL: 12
+LIT16: 4
+JL: 1
+BCTDZ: 4
+BCFAZ: 4
+BCFZ: 2
+LD: 5
+WRD: 16
+JMPE: 2
+DPETA: 6
+CAS: 2
+LDE: 5
+DTE: 13
+ATE: 9
+ETD: 27
+ETA: 31
+
+@std::__1::basic_string<...>::__grow_by_and_replace
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_expression<...>
+Migration Count: 0
+Remote Count: 0
+
+@cilkhelper1
+Migration Count: 0
+Remote Count: 0
+DTA: 6
+SWAPD: 3
+DTD2: 2
+LSR0: 3
+LSR3: 1
+AAIM: 8
+LIT: 2
+JMP: 1
+ETE: 3
+LM: 1
+SM: 1
+SILL: 16
+LIT16: 4
+BCFDZ: 1
+BCTGT: 1
+BCTITA: 1
+BCFZ: 2
+LD: 3
+STD: 2
+WRD: 3
+JALE: 2
+JMPE: 1
+CAS: 2
+STE: 1
+LDE: 3
+DTE: 4
+ATE: 2
+ETD: 4
+ETA: 8
+
+@__cxxabiv1::__fundamental_type_info::~__fundamental_type_info
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_exception::what
+Migration Count: 0
+Remote Count: 0
+
+@raise
+Migration Count: 0
+Remote Count: 0
+
+@std::exception::what
+Migration Count: 0
+Remote Count: 0
+
+@stoptiming
+Migration Count: 0
+Remote Count: 0
+
+@std::exception::~exception
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_exception::~bad_exception
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pointer_to_member_type_info::can_catch_nested
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__shim_type_info::noop1
+Migration Count: 0
+Remote Count: 0
+
+@std::exception::~exception
+Migration Count: 0
+Remote Count: 0
+
+@__funcs_on_exit
+Migration Count: 0
+Remote Count: 0
+JMPE: 2
+
+@__cxxabiv1::__pointer_to_member_type_info::~__pointer_to_member_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_discriminator
+Migration Count: 0
+Remote Count: 0
+
+@mw_malloc1dlong
+Migration Count: 0
+Remote Count: 0
+DTA: 5
+SWAPD: 5
+DTD2: 2
+ADDE: 2
+ANDE: 4
+ORE: 3
+XORE: 1
+SLLV: 2
+SRLV: 1
+LSR0: 2
+LSR1: 2
+LSR3: 2
+LSRe: 1
+LSRf: 1
+AAIM: 4
+AAIMB: 1
+LIT: 2
+SIL: 1
+JMP: 2
+ETE: 2
+SLLC: 3
+MUMA0: 1
+MUMA1: 3
+SILL: 11
+LIT16: 3
+BCTGT: 1
+BCFAZ: 3
+BCFZ: 2
+LD: 2
+STD: 2
+WRD: 2
+PRIORITYE: 2
+JALE: 1
+JMPE: 1
+UDIVE: 2
+CAS: 2
+STE: 1
+LDE: 4
+DTE: 15
+ATE: 2
+ETD: 6
+ETA: 10
+
+@operator delete[]
+Migration Count: 0
+Remote Count: 0
+
+@isdigit
+Migration Count: 0
+Remote Count: 0
+
+@__isupper_l
+Migration Count: 0
+Remote Count: 0
+
+@std::bad_exception::~bad_exception
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::base_name<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::__pbase_type_info::~__pbase_type_info
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_source_name<...>
+Migration Count: 0
+Remote Count: 0
+
+@realloc
+Migration Count: 0
+Remote Count: 0
+
+@__libc_start_init
+Migration Count: 0
+Remote Count: 0
+
+@fwrite
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_operator_name<...>
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::basic_string<...>::__grow_by
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_unresolved_name<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_prefix_expression<...>
+Migration Count: 0
+Remote Count: 0
+
+@isupper
+Migration Count: 0
+Remote Count: 0
+
+@__dynamic_cast
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::parse_function_param<...>
+Migration Count: 0
+Remote Count: 0
+
+@__cxxabiv1::(anonymous namespace)::string_pair<...>::operator=
+Migration Count: 0
+Remote Count: 0
+
+@isxdigit_l
+Migration Count: 0
+Remote Count: 0
+
+@std::__1::__split_buffer<...>::~__split_buffer
+Migration Count: 0
+Remote Count: 0
+
+**********************************************
+END INSTRUCTION COUNT FOR AID=1
+**********************************************
