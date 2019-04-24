@@ -12,7 +12,7 @@ EMU_SIM_ARGS += --short_trace
 
 EMU_PROFILE = $(EMU_PATH)/bin/emusim_profile
 
-EXE  = repl_class
+EXE  = main_migrate_hint
 EMU_EXE = $(EXE).mwx
 
 LDFLAGS = -lemu_c_utils

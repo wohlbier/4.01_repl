@@ -1,16 +1,6 @@
+#include <string>
 #include <cilk.h>
 #include <memoryweb.h>
-#include <string>
-
-
-
-
-typedef long Index_t;
-
-
-
-
-
 
 /*
  * Overrides default new to always allocate replicated storage for instances
@@ -39,9 +29,14 @@ public:
 class Matrix_t : public repl_new
 {
 public:
-    static Matrix_t * create(Index_t nrows)
+    static Matrix_t * create(long nrows)
     {
         return new Matrix_t(nrows);
+    }
+
+    void allocateRow(long i)  
+    {
+        rows_[i] = new long;
     }
 
     Matrix_t() = delete;
@@ -50,48 +45,27 @@ public:
     Matrix_t(Matrix_t &&) = delete;
     Matrix_t & operator=(Matrix_t &&) = delete;
 
-    void allocateRow(Index_t i)  
-    {
-        rows_[i] = new long;
-    }
-
     long * nodelet_addr(long i)
     {
         // dereferencing causes migrations
         return (long *)(rows_ + i);
     }
 
-  
 private:
-    Matrix_t(Index_t nrows) : nrows_(nrows)
+    Matrix_t(long nrows) : nrows_(nrows)
     {
+      
         rows_ = (long **)mw_malloc1dlong(nrows_);
 
         // replicate the class across nodelets
-        for (Index_t i = 1; i < NODELETS(); ++i)
+        for (long i = 1; i < NODELETS(); ++i)
         {
             memcpy(mw_get_nth(this, i), mw_get_nth(this, 0), sizeof(*this));
         }
-       
-
-
-
-
-
-
-
-
-
     }
 
-
-
-
-
-
-
-    Index_t nrows_;
-    Index_t ** rows_;
+    long nrows_;
+    long ** rows_;
 };
 
 
@@ -99,7 +73,7 @@ int main(int argc, char* argv[])
 {
     starttiming();
 
-    Index_t nrows = 8;
+    long nrows = 8;
     
     Matrix_t * A = Matrix_t::create(nrows);
 
